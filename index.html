@@ -1,119 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eco Plástica Internacional S.A.S</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
+      background-color: #f4f4f4;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background: #fff;
-      border-bottom: 4px solid #000;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background-color: #1b5e20;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
     }
-    header img.logo {
-      height: 80px;
+
+    nav {
+      background-color: #2e7d32;
+      text-align: center;
+      padding: 12px 0;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
+
+    nav a {
+      color: white;
       text-decoration: none;
-      color: #333;
+      margin: 0 15px;
       font-weight: bold;
+      font-size: 16px;
       transition: color 0.3s;
     }
-    nav ul li a:hover {
-      color: #007b55;
+
+    nav a:hover {
+      color: #c8e6c9;
     }
-    .btn-especial {
-      background: #007b55;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #007b55, #009f4d);
-      color: #fff;
-    }
-    main h1 {
+
+    .hero {
+      background-image: url("empresa1.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
       font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    main p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    main a {
-      background: #fff;
-      color: #007b55;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
     }
-    main a:hover {
-      background: #eaeaea;
-    }
-    footer {
-      background: #111;
-      color: #eee;
+
+    .contenido {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
     }
+
+    .contenido h2 {
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
+      .hero {
+        font-size: 1.8rem;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logooo.jpg" alt="Logo EPISA" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="INICIO.html">INICIO</a></li>
-        <li><a href="EMPRESA.html">EMPRESA</a></li>
-        <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
-        <li><a href="IMPACTO.html">IMPACTO</a></li>
-        <li><a href="beneficios.html">BENEFICIOS</a></li>
-        <li><a href="ubicacion.html">UBICACIÓN</a></li>
-        <li><a href="contacto.html">CONTACTO</a></li>
-      </ul>
-      <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
-    </nav>
+    <h1>Eco Plástica Internacional S.A.S</h1>
+    <p>Comprometidos con el desarrollo sostenible</p>
   </header>
 
-  <main>
-    <h1>Bienvenidos a Eco Plástica Internacional S.A.S</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="empresa.html">Empresa</a>
+    <a href="impacto.html">Impacto</a>
+    <a href="negocios.html">Negocios</a>
+    <a href="informacion-especial.html">Información Especial</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="correo.html">Correo</a>
+    <a href="ubicacion.html">Ubicación</a>
+  </nav>
+
+  <div class="hero">
+    ¡Bienvenidos!
+  </div>
+
+  <section class="contenido">
+    <h2>Bienvenido a Eco Plástica Internacional S.A.S</h2>
     <p>
-      Conocé nuestro proyecto de desarrollo sustentable, innovación industrial y compromiso con el medio ambiente.
+      Somos una empresa dedicada al desarrollo de soluciones sostenibles e innovadoras 
+      para el manejo responsable de materiales plásticos. Promovemos la economía circular, 
+      la responsabilidad ambiental y el bienestar social.
     </p>
-    <a href="INICIO.html">Entrar al sitio</a>
-  </main>
+
+    <p style="margin-top: 20px;">
+      Navegá por nuestras secciones para conocer más sobre nuestros proyectos, impacto, 
+      beneficios y oportunidades de negocio.
+    </p>
+  </section>
 
   <footer>
-    © 2025 Eco Plástica Internacional S.A.S — Todos los derechos reservados
+    <p>&copy; 2025 Eco Plástica Internacional S.A.S | Todos los derechos reservados</p>
   </footer>
+
 </body>
 </html>
