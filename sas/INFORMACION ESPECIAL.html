@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información Especial - Eco Plástica Internacional S.A.S</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* HEADER Y LOGO */
+  header {
+    position: relative;
+    background: #fff;
+    border-bottom: 4px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header img.logo {
+    height: 70px;
+  }
+
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #007b55;
+  }
+
+  .btn-especial {
+    background: #007b55;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+    /* CONTENIDO PRINCIPAL */
+    .contenido {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .contenido h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .contenido h2 {
+      font-size: 1.6rem;
+      margin-top: 30px;
+    }
+
+    .subtitulo {
+      color: #007b55;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .linea-negra {
+      width: 100%;
+      height: 60px;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 40px 0;
+    }
+
+    .contenido p {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+
+/* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      padding: 40px 20px 20px;
+      font-size: 14px;
+    }
+
+    .footer-contenido {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .footer-col p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 13px;
+      color: #aaa;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        border-top: 2px solid #000;
+      }
+      nav ul.active {
+        display: flex;
+      }
+    }
+
+/* =========================
+   RESPONSIVE / MOBILE CSS
+========================= */
+
+/* Para pantallas medianas (<1024px) */
+@media (max-width: 1024px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .vision-contenido {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para pantallas pequeñas (<768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .btn-especial {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .section, .section2, .vision, .parte-verde {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img, .vision img, .productos img, .imagen-verde img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Para pantallas muy pequeñas (<480px) */
+@media (max-width: 480px) {
+  .section h1, .vision h1, .section2 h1 {
+    font-size: 1.5rem;
+  }
+
+  .section h2, .vision h2, .section2 h2 {
+    font-size: 0.9rem;
+  }
+
+  .contenido-verde h1 {
+    font-size: 1.4rem;
+  }
+
+  .contenido-verde h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li a, .btn-especial {
+    font-size: 0.9rem;
+  }
+}
+
+
+    
+  </style>
+</head>
+<body>
+   <!-- HEADER CON LOGO Y NAV -->
+<header>
+  <img src="logooo.jpg" alt="Logo EPISA" class="logo"> <!-- Convierte el PDF a imagen logo.png -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+     
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+</header>
+
+  <!-- CONTENIDO -->
+  <div class="contenido">
+     <div class="linea-negra">Información Especial</div>
+  
+    <H2>NOMBRE DEL PROYECTO:</H2>
+    <P>Mega Polo Industrial de Reciclado Integral de los Plásticos Post Consumo.</P>
+    
+    <H2>INFORME SOCIETARIO:</H2> 
+    <P>El 28 de mayo 2024 constituimos en Montevideo una Sociedad Anónima Simplificada “SAS”. Inscripta en la DGI, RUT, Banco de Previsión Social. Nuestra  Oficina en calle Luis Franzini Nº 884 Of. 104 Montevideo.</P>
+    
+    <H2>DESCRIPCION:</H2>
+    <P>consiste en la construcción de un mega polo industrial compuesto por cuatro fábricas ecológicas de reciclaje de todos los plásticos reciclables, lo que nos convierte en el «1.er polo industrial de reciclaje integral de los plásticos pos consumo en el mundo».</P>
+
+    <H1>CREAREMOS 1.020 PUESTOS LABORALES. </H1>
+    <p class="subtitulo">EMPLEADOS</p>
+    <P>950 empleados de mano directa (fabricas), y 70 mano de obra indirecta, entre (acopiadores, recolectores y revendedores) Total 1.020. El resultado se debe a que las cuatros fabricas funcionaran las 24 horas al día y los 365 días del año. Cabe destacar que la cantidad de empleados es inicialmente y año a año se irá incrementando más empleados gracia a su sistema evolutivo.</P>
+    
+    <p class="subtitulo">BENEFICIO PARA EL PAIS “URUGUAY”</p>
+    <P>La instalación de nuestra empresa y edificación de este Polo Industrial funda un formidable  impacto socioeconómico y una gran asistencia ambiental que recibirá el país dado a que inicialmente reciclaremos 56.000 Tn. Y 1.020 puestos laborales, generando importantes ingreso y movimiento de divisas a la región y país.</P>
+     
+    <p class="subtitulo">JERARQUIA DEL PROYECTO </p>
+    <p>No existe en este rubro una semejanza de este mega proyecto, tanto en su capacidad creativa de trabajo, como en reciclado integral de los plásticos pos consumo posicionándolo como el <p class="subtitulo">PRIMER POLO INDUSTRIAL DE RECICLADO INTEGRAL DE LOS PLASTICOS EN EL MUNDO</p>
+     
+    <H2>BENEFICIARIOS:</H2>
+    <P>Personas de todo tipo de situación social. Informamos de que tendremos un departamento humanitario donde se donarán mesas, sillas, pupitres, alacenas, armarios, camas, etc., cada seis meses. , a escuelas públicas, hospitales, comedores sociales, etc. Asimismo, negociaremos con banco/s con intereses blandos para facilitar créditos accesibles para la compra de vivienda.</P>
+    
+    <H2>HISTORIAL Y ANTECEDENTES:</H2>
+    <P>Este megaproyecto se ha estado preparando durante 20 años, lo que nos ha llevado a rozar la perfección gracias a una enorme cantidad de estudios, investigaciones, pruebas y errores, logrando obtener una fórmula única y exclusiva que nos permite amalgamar todos los plásticos reciclables pos consumo, desactivarlos molecularmente y activarlos en el momento preciso. La explicación es que los polímeros (plásticos) se derriten a distintas temperaturas (entre 70 y 260 °C). Por ejemplo, una bolsa de polietileno de baja densidad se derrite a 105 °C, un polipropileno (PP) a 165 °C y un PET a 260 °C.  Entonces, si en la inyectora entran todos los plásticos mezclados, es imposible derretirlos todos al mismo tiempo. Ahí es donde entra en juego mi fórmula, creada por mí, Fernando Maranzano, que realiza esa acción</P>
+    
+    <h2>Compromiso Social y Solidario</h2>
+    <p class="subtitulo">DONACIONES PERIÓDICAS A INSTITUCIONES Y FAMILIAS VULNERABLES</p>
+    <p>Donaremos cada 6 meses a hospitales, comedores infantiles, escuelas públicas y familias en situación indigente: mesas, sillas, camas, pupitres, bibliotecas, mesas de luz.</p>
+
+    <h2>Excelencia Reconocida</h2>
+    <p class="subtitulo">PREMIOS INTERNACIONALES Y DISTINCIONES NACIONALES POR INNOVACIÓN Y CALIDAD</p>
+    <p>⮚	El 28 de mayo de 2018 nos convocaron para entregarnos un premio en la categoría «oro» en la ceremonia internacional del BID en Nueva York, en reconocimiento a nuestro proyecto por su nivel de conocimiento y contribución en términos de liderazgo, calidad, innovación y excelencia.</p>
+    <p>⮚	El 6 de noviembre 2018 fue decretado de INTERÉS LEGISLATIVO por la provincia de Tucumán Argentina</p>
+    <p>⮚	En el año 2005 en la expo 40, en el concurso de IDEAS y PROYECTOS PRODUCTIVOS, fue seleccionado entre los 3 mejores de 163 proyectos presentados, obteniendo  el 1º premio.</p>
+    <p>⮚	En agosto del 2003 El proyecto fue decretado de INTÉRES AMBIENTAL por la Dirección de Medio Ambiente, resolución Nº 045 (DMA) Exp. 169/20 M05 San Miguel de Tucumán Argentina. </p>
+    <P>⮚	En septiembre 2003 Fue decretado de INTERES PROVINCIAL DE TUCUMÁN, por el gobernador de la provincia, decreto Nº 3581/3 (MDP).</P>
+    <p>⮚	Además de diversas notas realizadas en diarios, revistas y TV. </p>
+    <P>⮚	Nuestro Departamento institucional dará charlas y cursos de conciencia ambiental y cuidado del medio ambiente para  reducir la contaminación, así mismo aplicaremos la modalidad a través de publicidad la separación de los residuos inorgánicos en origen “viviendas” incentivando con estímulos a determinar.</P>
+
+    <H2><STRONG>DE PRODUCCION ANUAL
+
+Reciclado de todos los plásticos de la fábrica de placas: 36.000 Tn.
+Para la Fábrica de hilo & Tela Solamente de PET:             20.000 Tn.
+                                                                                        TOTAL: 56.000 Tn. Anual que utilizaremos      
+</STRONG></H2>
+    <H2>Abastecimiento de nuestra materia prima “PLASTICOS”: </H2> <P>De Uruguay, Brasil, Argentina y gran posibilidad de importar de la Unión Europea pagándonos para extraerle los plásticos.</P>
+    <h1>Departamento Humanitario</h1>
+    <p>Uno de los principales departamento de nuestra empresa será el <strong>DEPARTAMENTO HUMANITARIO</strong> desde el mismo se abordarán necesidades sociales, humanitarias y ecológicas en nuestra comunidad y en áreas afectadas por desastres naturales o conflictos de guerra internacionales. Este departamento tendrá como objetivos los siguientes puntos:</p>
+
+    <p>1° Coordinar donaciones periódicas a países con necesidades extremas de viviendas, recursos y responder a emergencias.</p>
+    <p>2° Asistir con vivienda completas anti sísmicas, muebles y útiles a zona de catástrofe entendiéndose por tal, como “terremotos, inundaciones, huracanes, aluviones, tornados, ciclones, tifones, desbordamientos, tormentas de nieve y torrentes entre otros”.</p>
+    <p>3° Desarrollar programas de ayuda y apoyo a la comunidades necesitadas.</p>
+    <p>4° Mejorar la calidad de vida de los empleados y su familia.</p>
+    <p>5° Promover la diversidad, la inclusión y la igualdad incluyendo las personas con capacidades diferentes.</p>
+    <p>6° Evaluación de necesidades y desarrollo de diversos programas de desarrollo social.</p>
+    <p>7° Crear una ONG "FUNDACION" propia.</p>
+    <p>8° Coordinar con otras ONG y organizaciones guberamentales para trabajar en conjunto en la búsqueda de soluciones que asistan a la sociedad
+procurándole medios de vida dignos, laborales y económicos. </p>
+    <p>9° Gestiones de donaciones y recursos inmediatos para asistir a las familias más vulnerables con mayor necesidad, asimismo cada ó meses realizaremos
+donaciones de camas, mesas de luz a hospitales y a escuelas públicas bibliotecas, pupitres, estanterías etc. </p>
+    <p> 10° Comunicación y sensibilización sobre causas humanitarias, trabajando desde el femillero que son los niños, incentivándolos a comprometerse con la responsabilidad en el cuidado del medio ambiente e incentivarlo a que sea solidarios con la humanidad. </p>
+    <p>11° Desarrollo de partnerships "asociaciones" con otras empresas y organizaciones.
+MUY IMPORTANTE: Es destacar que este departamento humanitario debe ser alineado con la estrategia y valores de la empresa y tendrá un presupuesto y recurso adecuado para cumplir sus objetivos plenamente y con las mayores garantías para la toda la comunidad. Para todo ello. EPI se proyecta cómo único modelo en el país y en la región con un programa que básicamente se sustenta en los siguientes pilares estratégicos.</p>
+    
+    
+    <h1>ESTRATEGIAS QUE REGIRAN PARA EL DEPARTAMENTO HUMANITARIO</h1>
+    <P>1. Investigación y Evaluación de Necesidades: Antes de implementar cualquier programa, se realizará un estudio con personal competente que permita identificar las necesidades específicas de las comunidades afectadas. Esto asegurará que las donaciones y asistencias sean relevantes y efectivas.</P>
+    <P>2. Desarrollo de Proyectos Efectivos: Diseñará cada proyecto con precisión, estableciendo objetivos claros, indicadores de éxito y un cronograma. Involucra a las comunidades en el proceso para asegurar su participación y sostenibilidad.</P>
+    <P>3. Alianzas Estratégicas: Colaborará con ONG ya establecidas y otras empresas que comparten valores similares. Esto no sólo amplificará el impacto de nuestros esfuerzos, sino que también ofrecerá recursos y experiencia adicional.</P>
+    <P>4. Comunicación Transparente: Mantendrá una comunicación abierta tanto interna como externamente. Informará a tus empleados y la comunidad sobre las acciones realizadas, fondos recaudados y resultados obtenidos. Esto fomentará un sentido de confianza y pertenencia que fortalecerá el compromiso con la Empresa.</P>
+    <P>5. Formación y Sensibilización: Capacitará a nuestros empleados sobre la importancia del trabajo humanitario y cómo pueden involucrarse. Promoverá
+iniciativas que fomenten la responsabilidad social dentro de la cultura organizacional. </P>
+    <P>6. Presupuesto y Recursos: Nos aseguraremos de que el departamento cuente con un presupuesto adecuado participando de un porcentaje de las ganancias. Estableciendo un sistema de financiación que permita la sostenibilidad a largo plazo de los proyectos.</P>
+    <P>7. Monitoreo y Evaluación: Implementará mecanismos de seguimiento para evaluar el impacto de las iniciativas. Esto permitirá realizar ajustes cuando sea necesario y demostrar la efectividad de los programas a los donantes y la comunidad. </P>
+    <P>8. Fomento del Voluntariado: Animará y estimulará a los empleados a participar corpo voluntarios en diferentes proyectos. Esto no sólo fortalecerá el equipo, sino que también aumentará el compromiso hacia la causa. </P>
+    <P>9. Sensibilización y Campañas de Comunicación: Desarrollará campañas de sensibilización que informen sobre las necesidades humanitarias y motiven a más personas a involucrarse. </P>
+    <P>10. Informe Anual de Impacto: Publicará un informe cada año donde se detallarán las actividades realizadas, el impacto de las iniciativas y el uso de los recursos. Esto promueve la transparencia y puede incentivar futuras donaciones.</P>
+    
+    <P><strong>Implementar un departamento humanitario es un gran compromiso que puede tener un impacto positivo significativo en muchas vidas. Al alinear este esfuerzo con los valores de nuestra empresa, no sólo contribuirás al bienestar de las comunidades afectadas, sino que también fortalecerás la imagen y la cultura de nuestra organización.</strong></P>
+
+<!-- Pie de página -->
+  <footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. S - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. S lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. S © 2025.</p>
+  </div>
+</footer>
+
+
+
+
+  </div>
+
+</body>
+</html>
