@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ubicación - Eco Plástica Internacional S.A.S</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #222; line-height: 1.6; }
+
+    /* HEADER FIJO */
+     /* HEADER Y LOGO */
+  header {
+    position: relative;
+    background: #fff;
+    border-bottom: 4px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header img.logo {
+    height: 70px;
+  }
+
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #007b55;
+  }
+
+  .btn-especial {
+    background: #007b55;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+    main { padding-top: 120px; max-width: 1100px; margin: 0 auto; }
+
+    /* HERO VERDE */
+    .hero {
+      background: linear-gradient(90deg, #0b7a39 0%, #0a6f12 100%);
+      color: #fff;
+      padding: 48px 22px;
+      border-radius: 6px;
+      margin: 12px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 34px; font-weight: 900; margin-bottom: 8px; }
+    .hero p.lead { font-size: 20px; font-weight: 700; }
+
+    section.content { padding: 36px 20px; background: #fff; }
+    h2.section-title { color: #0b7a4a; font-size: 20px; margin-bottom: 14px; font-weight: 800; }
+    p.intro { font-size: 16px; margin-bottom: 18px; color: #333; }
+
+    ul.ventajas { list-style: none; margin: 10px 0 24px 0; padding: 0; }
+    ul.ventajas li {
+      position: relative; padding-left: 28px; margin-bottom: 12px;
+      font-size: 15px; color: #333;
+    }
+    ul.ventajas li::before {
+      content: "✔"; position: absolute; left: 0; top: 0;
+      color: #28a745; font-weight: 800;
+    }
+    ul.ventajas li b { color: #0b5a36; }
+
+    /* LUGAR PARA LA IMAGEN */
+    .mapa {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .mapa img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .intro {
+      border-left: 6px solid #0b7a4a;
+      padding: 16px 18px;
+      margin: 26px 0 40px 0;
+      background: #fafafa;
+      color: #222;
+      font-size: 15px;
+    }
+
+ /* Footer */
+   footer {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+/* =========================
+   RESPONSIVE / MOBILE CSS
+========================= */
+
+/* Para pantallas medianas (<1024px) */
+@media (max-width: 1024px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .vision-contenido {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para pantallas pequeñas (<768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .btn-especial {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .section, .section2, .vision, .parte-verde {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img, .vision img, .productos img, .imagen-verde img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Para pantallas muy pequeñas (<480px) */
+@media (max-width: 480px) {
+  .section h1, .vision h1, .section2 h1 {
+    font-size: 1.5rem;
+  }
+
+  .section h2, .vision h2, .section2 h2 {
+    font-size: 0.9rem;
+  }
+
+  .contenido-verde h1 {
+    font-size: 1.4rem;
+  }
+
+  .contenido-verde h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li a, .btn-especial {
+    font-size: 0.9rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <img src="logooo.jpg" alt="Logo EPISA" class="logo"> <!-- Convierte el PDF a imagen logo.png -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')"></span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+     
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+</header>
+
+  <main>
+    <div class="hero">
+      <h1>1° POLO INTERNACIONAL DE RECICLADO</h1>
+      <p class="lead">Integral de los plásticos posconsumo</p>
+    </div>
+<!-- LUGAR RESERVADO PARA LA IMAGEN -->
+      <div class="mapa">
+        <img src="mapa.jpg" alt="Mapa de Fray Bentos, Uruguay (espacio reservado)">
+      </div>
+
+    <section class="content">
+      <h2 class="section-title">Nuestra Ubicación</h2>
+      <p class="intro">
+        El Polo Industrial de Reciclado Integral de los Plásticos de Eco Plástica Internacional se encuentra estratégicamente ubicado en la ciudad de Fray Bentos, Uruguay. Esta ciudad, situada en la República Oriental del Uruguay, se ha consolidado como una de las zonas industriales más importantes de la región debido a su ubicación privilegiada y su infraestructura favorable para la industria.
+      </p>
+
+      <h3>Ventajas de la Ubicación</h3>
+      <ul class="ventajas">
+        <li><b>Zona Industrial:</b> Fray Bentos se destaca por su perfil industrial, con una infraestructura desarrollada para el establecimiento de empresas y la operación eficiente de industrias.</li>
+        <li><b>Acceso al Río Uruguay:</b> El Polo Industrial cuenta con acceso directo al río Uruguay, lo que facilita tanto la importación de materias primas como la exportación de productos terminados a través de su puerto propio.</li>
+        <li><b>Conexiones con Países Limítrofes:</b> La ubicación estratégica del Polo Industrial permite un fácil acceso a los países vecinos, lo que facilita las operaciones comerciales con estos mercados.</li>
+        <li><b>Apoyo Gubernamental:</b> El municipio de Fray Bentos, liderado por el Ing. Omar Lafrut, ha demostrado un gran interés y apoyo para la instalación y desarrollo del Polo Industrial...</li>
+        <li><b>Recursos Naturales:</b> La zona cuenta con recursos naturales abundantes y una geografía favorable para la instalación de industrias, lo que contribuye al desarrollo sostenible del proyecto.</li>
+      </ul>
+
+      
+      <p class="intro">
+        La ubicación estratégica del Polo Industrial en Fray Bentos, Uruguay, por parte del gobierno nacional ofrece una serie de ventajas y oportunidades para el desarrollo exitoso del proyecto, asegurando su competitividad y sostenibilidad a largo plazo.
+      </p>
+
+      
+    </section>
+
+   <!-- Footer -->
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. S - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. S </S> © 2025. .</p>
+  </div>
+</footer>
+
+  </main>
+</body>
+</html>
